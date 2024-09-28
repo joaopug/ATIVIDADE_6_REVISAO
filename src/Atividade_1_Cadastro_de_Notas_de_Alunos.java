@@ -16,9 +16,12 @@ public class Atividade_1_Cadastro_de_Notas_de_Alunos {
         while (n <= qtd) {
             System.out.println("Digite a nota do aluno " + n + ":");
             notasA[i] = sc.nextDouble();
-            sc.nextLine();
-            n++;
-            i++;
+            if (notasA[i] < 0 || notasA[i] > 10) {
+                System.out.println("Nota inválida");
+            } else {
+                n++;
+                i++;
+            }
         }
 
         n = 0;
